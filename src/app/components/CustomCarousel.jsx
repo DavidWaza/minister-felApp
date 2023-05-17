@@ -4,33 +4,43 @@ import  UserCommentCard  from "./UserCommentCard";
 
 import "swiper/css";
 import "swiper/css/pagination";
-import { Keyboard, Navigation, Pagination } from "swiper";
+import "swiper/css/navigation";
+
+import {Autoplay, Keyboard, Navigation, Pagination } from "swiper";
 import {UserCommentsProfile} from '../../../lib/data'
 
 const CustomCarousel = () => {
   return (
     <>
       <Swiper
-          slidesPerView={1}
-          centeredSlides={false}
-          slidesPerGroupSkip={2}
-          grabCursor={true}
-          keyboard={{
-            enabled: true,
-          }}
-          breakpoints={{
-            769: {
-              slidesPerView: 2,
-              slidesPerGroup: 2,
-            },
-          }}
-          scrollbar={true}
-          navigation={true}
-          pagination={{
-            clickable: true,
-          }}
-          modules={[Keyboard, Navigation, Pagination]}
-          className="mySwiper"
+       centeredSlides={true}
+       autoplay={{
+         delay: 2500,
+         disableOnInteraction: false,
+       }}
+       pagination={{
+         clickable: true,
+       }}
+       navigation={true}
+        slidesPerView={1}
+        spaceBetween={10}
+       
+        breakpoints={{
+          640: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+          },
+          768: {
+            slidesPerView: 4,
+            spaceBetween: 40,
+          },
+          1024: {
+            slidesPerView: 3,
+            spaceBetween: 50,
+          },
+        }}
+        modules={[Pagination, Autoplay, Navigation]}
+        className="mySwiper"
       >
         {UserCommentsProfile.map(({ name, src, showLess}, index) => (
           <SwiperSlide key={index}>

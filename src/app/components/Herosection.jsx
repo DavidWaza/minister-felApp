@@ -27,7 +27,7 @@ export default function Herosection() {
     >
       <div className="hero-bg">
         <motion.div
-          className="flex justify-center pt-36 md:pt-64 md:px-32 carousel-position customCarouselPadding"
+          className="flex justify-center pt-36 md:pt-[30%] md:px-32 carousel-position customCarouselPadding"
           animate={{ pathLength: 1 }}
           transition={{ duration: 2, type: "tween" }}
         >
