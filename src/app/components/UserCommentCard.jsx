@@ -11,7 +11,7 @@ import Typography from "@mui/material/Typography";
 export default function UserCommentCard({ alt, src, name, comments }) {
   return (
    <Card sx={{ maxWidth: 345, maxHeight: 300 }}>
-      <div className="flex justify-center align-middle -m-[12px]">
+      <div className="flex justify-center align-middle cardMarginAdj-avatar">
         <CardHeader
           avatar={<Avatar alt={alt} src={src} sx={{ width: 56, height: 56 }} />}
         />
@@ -21,7 +21,7 @@ export default function UserCommentCard({ alt, src, name, comments }) {
         <Typography
           variant="body2"
           color="text.secondary"
-          className="text-center text-[12px] primary_font px-[15px] -mt-[15px]"
+          className="text-center text-[12px] primary_font px-[15px] cardMarginAdj"
         >
           {comments.trim().substring(0, 80) + "..."}
         </Typography>
@@ -32,14 +32,14 @@ export default function UserCommentCard({ alt, src, name, comments }) {
           gutterBottom
           variant="p"
           component="div"
-          className="flex justify-center text-mute font-extrabold text-[14px] primary_font -mt-[35px] capitalize px-4"
+          className="flex justify-center text-mute font-extrabold text-[14px] primary_font cardMarginAdj-name capitalize px-4"
         >
           {name}
         </Typography>
         <CardActions className="flex justify-center">
           <Button
             size="small"
-            className="primary_font text-center seeMore_button_text -m-[15px]"
+            className="primary_font text-center seeMore_button_text cardMarginAdj"
             href="/tribute"
           >
             See More
