@@ -39,7 +39,7 @@ export default function UserCommentCard({ alt, src, name, comments }) {
         <CardActions className="flex justify-center">
           <Button
             size="small"
-            className="primary_font text-center text-[12px] seeMore_button_text"
+            className="primary_font text-center seeMore_button_text"
             href="/tribute"
           >
             See More

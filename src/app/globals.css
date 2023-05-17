@@ -164,6 +164,7 @@
 }
 .seeMore_button_text{
   color: #bd0075 !important;
+  font-size: 12px !important;
 }
 @media screen and (max-width: 767px) {
   .customizable-font{
