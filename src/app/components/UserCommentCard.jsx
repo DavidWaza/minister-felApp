@@ -23,7 +23,7 @@ export default function UserCommentCard({ alt, src, name, comments }) {
           color="text.secondary"
           className="text-center cardTypography primary_font px-[15px] cardMarginAdj"
         >
-          {comments.trim().substring(0, 80) + "..."}
+          {comments.trim().substring(0, 76) + "..."}
         </Typography>
         <hr className="w-1/2 my-[10px] mx-[auto]" />
       </CardContent>
