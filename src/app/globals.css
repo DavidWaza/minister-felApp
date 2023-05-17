@@ -162,7 +162,9 @@
 .swiper-slide:nth-child(3n) {
   width: 20%;
 }
-
+.seeMore_button_text{
+  color: #bd0075 !important;
+}
 @media screen and (max-width: 767px) {
   .customizable-font{
     font-size: 1rem;
