@@ -255,8 +255,29 @@
     height: 85vh;
   }
 } */
-@media screen and (max-width: 414px){
+@media screen and (max-width: 415px){
   .customCarouselPadding{
     padding-top: 85%;
   }
+}
+@media(width: 414px) {
+  .customCarouselPadding{
+    padding-top:50% ;
+  }
+}
+@media (width: 375px) {
+  .customCarouselPadding{
+    padding-top:50% !important;
+  }
+}
+@media (width: 360px) {
+  .customCarouselPadding{
+    padding-top:50% !important;
+  }
+}
+
+  @media (height: 896px) {
+    .customCarouselPadding{
+      padding-top:85% !important;
+    }
 }
