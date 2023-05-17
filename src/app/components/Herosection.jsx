@@ -1,9 +1,7 @@
 "use client";
 import CustomCarousel from "./CustomCarousel";
 import { motion } from "framer-motion";
-
-const name = `Engr. Suleiman H. Adamu FNSE, FAEng.`;
-const position = `Minister of Water Resources`;
+import { position, name } from "../../../lib/userdata";
 
 export default function Herosection() {
   return (

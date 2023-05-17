@@ -1,5 +1,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -38,12 +39,26 @@
   width: 100%;
   display: flex;
   align-items: center;
-  position: relative;
   padding: 0.5rem 0rem;
   background-color: transparent;
   color: black;
   position: fixed;
   z-index: 10
+}
+.navigation-noir {
+  height: 100px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 0rem;
+  background-color: white;
+  color: black;
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  right: 0;
+
 }
 
 .brandName {
@@ -52,15 +67,25 @@
 
 .navigationMenu {
   margin-left: auto;
-
+}
+.navigationMenu-noir {
+  margin-left: auto;
 }
 
 .navigationMenu ul {
   display: flex;
   padding: 0;
 }
+.navigationMenu-noir ul {
+  display: flex;
+  padding: 0;
+}
 
 .navigationMenu li {
+  list-style-type: none;
+  margin: 0 1rem;
+}
+.navigationMenu-noir li {
   list-style-type: none;
   margin: 0 1rem;
 }
@@ -73,13 +98,28 @@
   color: #fff;
   padding: 4px 10px;
 }
+.navigationMenu-noir li a {
+  font-family: 'Poppins', sans-serif;
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  color: #000;
+  padding: 4px 10px;
+}
 
 .navigation li a::after,
 .navigation li a::before {
   transition: all .5s;
 }
-
+.navigation-noir li a::after,
+.navigation-noir li a::before {
+  transition: all .5s;
+}
 .stroke li a {
+  display: inline-block;
+  position: relative;
+}
+.stroke-noir li a {
   display: inline-block;
   position: relative;
 }
@@ -96,12 +136,32 @@
   transform-origin: bottom right;
   transition: transform 0.25s ease-out
 }
+.stroke-noir li a::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: -10px;
+  left: 0;
+  background-color: #bd0075;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out
+}
 
 .stroke li a:hover {
   color: #898383;
 }
+.stroke-noir li a:hover {
+  color: #898383;
+}
 
 .stroke li a:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+  opacity: 1;
+}
+.stroke-noir li a:hover::after {
   transform: scaleX(1);
   transform-origin: bottom left;
   opacity: 1;
@@ -183,12 +243,28 @@
   .current-color{
     color: #fff;
   }
+  .current-color-noir{
+    color: #000;
+  }
 
   .navigationMenu ul {
     display: none;
   }
+  .navigationMenu-noir ul {
+    display: none;
+  }
 
   .navigationMenu ul {
+    position: absolute;
+    top: 60px;
+    padding-bottom: 20px;
+    left: 0;
+    flex-direction: column;
+    width: 100%;
+    background-color: white;
+    border-top: 1px solid black;
+  }
+  .navigationMenu-noir ul {
     position: absolute;
     top: 60px;
     padding-bottom: 20px;
@@ -203,14 +279,24 @@
     text-align: center;
     margin: 0;
   }
-
+  .navigationMenu-noir li {
+    text-align: center;
+    margin: 0;
+  }
   .navigationMenu li a {
     color: black;
     width: 100%;
     padding: 1.5rem 0;
   }
-
+  .navigationMenu-noir li a {
+    color: black;
+    width: 100%;
+    padding: 1.5rem 0;
+  }
   .navigationMenu li:hover {
+    background-color: #eee;
+  }
+  .navigationMenu-noir li:hover {
     background-color: #eee;
   }
 
@@ -218,7 +304,10 @@
     display: block;
     z-index: 1;
   }
-
+  .navigationMenu-noir.expanded ul {
+    display: block;
+    z-index: 1;
+  }
   .swiper-slide:first-child {
     transition: transform 100ms;
   }

@@ -9,10 +9,10 @@ const links = [
   { href: "/tribute", label: "Tribute" },
 ];
 
-const BigNav = () => {
+const Nav = () => {
   const [isNavExpanded, setIsNavExpanded] = useState(false);
   return (
-    <nav className="navigation">
+    <nav className="navigation-noir">
       <button
         className="hamburger"
         id="text"
@@ -26,7 +26,7 @@ const BigNav = () => {
           viewBox="0 0 24 24"
           strokeWidth={1.5}
           stroke="currentColor"
-          className="w-6 h-6 current-color"
+          className="w-6 h-6 current-color-noir"
         >
           <path
             strokeLinecap="round"
@@ -36,9 +36,9 @@ const BigNav = () => {
         </svg>
       </button>
       <div
-        className={isNavExpanded ? `navigationMenu expanded` : `navigationMenu`}
+        className={isNavExpanded ? `navigationMenu-noir expanded` : `navigationMenu-noir`}
       >
-        <ul className="stroke">
+        <ul className="stroke-noir">
           {links.map(({ href, label }, index) => {
             return (
               <li className="pt-3" key={index + label}>
@@ -59,4 +59,4 @@ const BigNav = () => {
   );
 };
 
-export default BigNav;
+export default Nav;
