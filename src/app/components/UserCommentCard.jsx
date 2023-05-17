@@ -21,7 +21,7 @@ export default function UserCommentCard({ alt, src, name, comments }) {
         <Typography
           variant="body2"
           color="text.secondary"
-          className="text-center text-[12px] primary_font px-[15px] cardMarginAdj"
+          className="text-center cardTypography primary_font px-[15px] cardMarginAdj"
         >
           {comments.trim().substring(0, 80) + "..."}
         </Typography>
@@ -32,7 +32,7 @@ export default function UserCommentCard({ alt, src, name, comments }) {
           gutterBottom
           variant="p"
           component="div"
-          className="flex justify-center text-mute font-extrabold text-[14px] primary_font cardMarginAdj-name capitalize px-4"
+          className="flex justify-center text-mute font-extrabold primary_font cardTypho-name cardMarginAdj-name capitalize px-4"
         >
           {name}
         </Typography>

@@ -27,7 +27,12 @@
 .customizable-font{
   font-size: 2rem;
 }
-
+.cardTypography{
+  font-size: 12px;
+}
+.cardTypho-name{
+  font-size: 14px;
+}
 .navigation {
   height: 100px;
   width: 100%;
