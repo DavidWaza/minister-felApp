@@ -1,0 +1,6 @@
+.imgSize{
+    height: 100%;
+    width: auto;
+    -webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
