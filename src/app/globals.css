@@ -356,7 +356,7 @@
 } */
 @media screen and (max-width: 415px){
   .customCarouselPadding{
-    padding-top: 65vh;
+    padding-top: 60vh;
   }
 }
 @media(width: 414px) {
