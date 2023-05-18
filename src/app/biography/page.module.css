@@ -47,13 +47,6 @@
     justify-content: start;
     padding-left: 5px;
 }
-
-/* .arrowLeftBottom, .arrowRightBottom{
-    background-color: black;
-    padding: 6px 12px;
-    color: white;
-} */
-
 .arrowWrapper {
     display: flex;
     justify-content: center;

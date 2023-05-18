@@ -46,6 +46,7 @@ export default function Herosection() {
           <p className="text-white primary_font tracking-wide mobile_font">
             {position.toUpperCase()}
           </p>
+          <p className="primary_font text-white date">2015 - 2023</p>
         </motion.div>
       </div>
     </motion.div>

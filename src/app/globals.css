@@ -230,6 +230,9 @@
 .cardMarginAdj-avatar{
   margin-top: -12px;
 }
+.date{
+  font-size: 12px;
+}
 @media screen and (max-width: 767px) {
   .customizable-font{
     font-size: 1rem;
@@ -374,6 +377,6 @@
 
   @media (height: 896px) {
     .customCarouselPadding{
-      padding-top:65vh;
+      padding-top:60vh;
     }
 }
