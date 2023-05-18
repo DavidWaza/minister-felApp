@@ -1,6 +1,12 @@
 .imgSize{
-    height: 100%;
-    width: auto;
+    height: 70%;
+    width: 100%;
     -webkit-transition: .3s ease-in-out;
 	transition: .3s ease-in-out;
+}
+@media(max-width:500px){
+    .imgSize{
+        width: 100%;
+        height: 70%;
+    }
 }

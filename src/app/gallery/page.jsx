@@ -12,7 +12,7 @@ export default function Gallery() {
   const [open, setOpen] = useState(false);
 
   const imgElements = Slides.map(({ src }, index) => (
-    <Grid item xs={12} md={4} key={index}>
+    <Grid item xs={4} md={4} key={index}>
       <img
         src={src}
         alt="alt"
