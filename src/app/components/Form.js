@@ -34,87 +34,89 @@ export default function Form() {
   const cancelButtonRef = useRef(null);
   return (
     <>
-      <Container>
-        <Row className="flex justify-center w-full mt-[10%]">
-          {commentDetails.map((comment, index) => {
-            return (
-              <Col
-                sm={4}
-                md={4}
-                xs={12}
-                key={index}
-                className="w-full my-[30px]"
+      <div className="bg-[#707B7C]">
+        <Container>
+          <Row className="flex justify-center mt-[10%]">
+            {commentDetails.map((comment, index) => {
+              return (
+                <Col
+                  sm={4}
+                  md={4}
+                  xs={12}
+                  key={index}
+                  className="w-full py-[30px]"
+                >
+                  <div className="h-full bg-[#F0F3F4] pt-16 pb-24 shadow-lg shadow-blue-500/50 overflow-hidden text-center relative text-[18px]">
+                    <p className="leading-relaxed text-[#212F3D]">
+                      {comment?.textArea}
+                    </p>
+                    <br />
+                    <hr className=" text-[#212F3D] w-1/2 m-auto mb-2" />
+                    <p className=" primary_font text-[#212F3D]">
+                      {comment?.firstName + " " + comment?.lastName}
+                    </p>
+                  </div>
+                </Col>
+              );
+            })}
+          </Row>
+        </Container>
+        <div className="flex justify-center w-full">
+          <div className="flex p-6 align-middle justify-center">
+            <Button onClick={handleOpen}>
+              <div
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{
+                  delay: 0.6,
+                  duration: 0.6,
+                  ease: [0.9, 0.71, 0.7, 1.01],
+                }}
+                className="primary_font text-center text-white p-3 floating-button"
               >
-                <div className="h-full bg-[#161E2D] px-8 pt-16 pb-24 overflow-hidden text-center relative">
-                  <p className="leading-relaxed text-white">
-                    {comment?.textArea}
-                  </p>
-                  <br />
-                  <hr className="bg-white text-white" />
-                  <p className="text-white primary_font text-white">
-                    {comment?.firstName + " " + comment?.lastName}
-                  </p>
-                </div>
-              </Col>
-            );
-          })}
-        </Row>
-      </Container>
-      <div className="flex justify-center w-full">
-        <div className="flex p-6 align-middle justify-center">
-          <Button onClick={handleOpen}>
-            <div
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              transition={{
-                delay: 0.6,
-                duration: 0.6,
-                ease: [0.9, 0.71, 0.7, 1.01],
+                Write a Message
+              </div>
+            </Button>
+            <Modal
+              aria-labelledby="transition-modal-title"
+              aria-describedby="transition-modal-description"
+              open={open}
+              onClose={handleClose}
+              closeAfterTransition
+              slots={{ backdrop: Backdrop }}
+              slotProps={{
+                backdrop: {
+                  timeout: 500,
+                },
               }}
-              className="primary_font text-center text-white p-3 floating-button"
             >
-              Write a Message
-            </div>
-          </Button>
-          <Modal
-            aria-labelledby="transition-modal-title"
-            aria-describedby="transition-modal-description"
-            open={open}
-            onClose={handleClose}
-            closeAfterTransition
-            slots={{ backdrop: Backdrop }}
-            slotProps={{
-              backdrop: {
-                timeout: 500,
-              },
-            }}
-          >
-            <Fade in={open}>
-              <Box sx={style}>
-                <form onSubmit={handleSubmit(onSubmit)}>
-                  <input
-                    {...register("firstName")}
-                    className="formControl"
-                    placeholder="First Name"
-                  />
-                  <input
-                    {...register("lastName")}
-                    className="formControl"
-                    placeholder="Last Name"
-                  />
-                  <textarea
-                    {...register("textArea")}
-                    className="formControl"
-                    placeholder="Drop a message"
-                  />
-                  <input type="submit" className="btn-submit" />
-                </form>
-                <button onClick={() => setOpen(false)} className="btn-danger">
-                  Cancel
-                </button>
-              </Box>
-            </Fade>
-          </Modal>
+              <Fade in={open}>
+                <Box sx={style}>
+                  <form onSubmit={handleSubmit(onSubmit)}>
+                    <input
+                      {...register("firstName")}
+                      className="formControl"
+                      placeholder="First Name"
+                    />
+                    <input
+                      {...register("lastName")}
+                      className="formControl"
+                      placeholder="Last Name"
+                    />
+                    <textarea
+                      {...register("textArea")}
+                      className="formControl"
+                      placeholder="Drop a message"
+                    />
+                    <input type="submit" className="btn-submit" />
+                  </form>
+                  <button onClick={() => setOpen(false)} className="btn-danger">
+                    Cancel
+                  </button>
+                </Box>
+              </Fade>
+            </Modal>
+          </div>
         </div>
       </div>
     </>
