@@ -234,10 +234,38 @@
   font-size: 12px;
 }
 .formControl{
-  padding: 5px 10px;
-  display: block;
-  background-color: #898383;
+  background: rgba(0, 0, 0, 0.1);
   border: 1px solid #000;
+  display: block;
+  border-radius: 4px;
+  width: 100%;
+  margin: 10px 0px;
+  padding: 12px 20px;
+  transition: 0.3s ease;
+}
+.formControl input:focus{
+  color: rgba(0, 0, 0, 0.8);
+}
+.floating-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 10000;
+  background-color:black ;
+}
+.btn-submit, .btn-danger{
+  padding: 12px 20px;
+  color: #fff;
+  text-align: center;
+  width: 100%;
+  margin-top: 10px;
+  font-family: 'Poppins', sans-serif;
+}
+.btn-submit{
+  background-color: #bd0075;
+}
+.btn-danger{
+  background-color: #000;
 }
 @media screen and (max-width: 767px) {
   .customizable-font{

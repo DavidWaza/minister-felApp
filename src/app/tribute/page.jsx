@@ -6,12 +6,12 @@ export default function Tribute() {
   return (
     <div>
       <div className="bg-[#444654]">
-        <CommentBlock
+        {/* <CommentBlock
           src="/img1.jpg"
           alt="alt"
           name="david waza"
           comments="i love food"
-        />
+        /> */}
       </div>
       <Form />
     </div>
