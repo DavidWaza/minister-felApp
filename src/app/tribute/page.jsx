@@ -7,9 +7,7 @@ export default function Tribute() {
   return (
     <div>
       <Nav />
-      <div className="pt-[7%] bg-[#444654]">
-      
-      </div>
+      <div className="pt-[7%] bg-[#444654]"></div>
       <Form />
     </div>
   );
