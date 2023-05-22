@@ -54,12 +54,16 @@
 }
 
 @media(max-width: 500px) {
+    .nameTitle{
+        font-size: 18px;
+    }
     .header {
         margin-top: 30%;
         font-size: 1.7rem;
     }
 
     .citation {
+        font-size: 18px;
         line-height: 1.6;
         letter-spacing: 0.298px;
         font-style: normal;
