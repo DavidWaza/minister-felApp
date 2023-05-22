@@ -46,8 +46,8 @@ export default function Form() {
                   key={index}
                   className="w-full py-[30px]"
                 >
-                  <div className="h-full bg-[#F0F3F4] pt-16 pb-24 shadow-lg shadow-blue-500/50 overflow-hidden text-center relative text-[18px]">
-                    <p className="leading-relaxed text-[#212F3D]">
+                  <div className="h-full bg-[#F0F3F4] pt-14 pb-[20px] shadow-lg shadow-blue-500/50 overflow-hidden text-center relative text-[18px]">
+                    <p className="leading-relaxed text-[#212F3D] text-[18px] px-[15px]">
                       {comment?.textArea}
                     </p>
                     <br />
